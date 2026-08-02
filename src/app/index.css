@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("/fonts/Manrope-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("/fonts/CormorantGaramond-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 300 400 500 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import "tailwindcss";
+
+@layer base {
+    html {
+        background-color: #f9f8f8;
+        font-size: 10px;
+        font-family: "Manrope", sans-serif;
+    }
+    html * {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 0;
+    margin: 0 auto;
+}
+
+@theme {
+    /* Свои цвета — будут как bg-primary, text-secondary */
+    --color-primary: #b18636;
+    --color-secondary: #fafbfb;
+    --color-text-primary: #47494b;
+    --color-text-secondary: #fafbfb;
+
+    --font-manrope: "Manrope", sans-serif;
+    --font-heading: "Cormorant Garamond", sans-serif;
+
+    --text-heading: 4.5vw;
+    --text-heading--line-height: 1.1;
+    --text-heading--font-weight: 700;
+    --text-heading--letter-spacing: 0.4rem;
+
+    --text-heading-description: 2.5vw;
+    --text-heading-description--line-height: 1.1;
+    --text-heading-description--font-weight: 500;
+
+    --text-content: 1.2vw;
+    --text-content--line-height: 1;
+    --text-content--font-weight: 500;
+
+    --text-paragraph: 1.8rem;
+    --text-paragraph--line-height: 1.5;
+    --text-paragraph--font-weight: 500;
+
+    --text-strong: 1.25rem;
+    --text-strong--line-height: 1.25;
+    --text-strong--font-weight: 700;
+
+    --text-small: 1rem;
+    --text-small--line-height: 1.25;
+    --text-small--font-weight: 500;
+
+    --animate-rotating-cloud: rotating-cloud 10s ease-in-out infinite;
+}
