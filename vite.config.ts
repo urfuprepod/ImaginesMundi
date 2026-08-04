@@ -11,6 +11,7 @@ export default defineConfig({
         alias: {
             shared: path.resolve(__dirname, "./src/shared"),
             utils: path.resolve(__dirname, "./src/utils"),
+            types: path.resolve(__dirname, "./src/types")
         },
     },
     plugins: [react(), tailwindcss(), tsconfigPaths()],
