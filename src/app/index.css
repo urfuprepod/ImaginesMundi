@@ -58,7 +58,9 @@ body {
     --color-text-primary: #47494b;
     --color-text-secondary: #fafbfb;
     --color-border: #212529;
-    --colors-gg: #f5f3f1;
+    --color-gg: #f5f3f1;
+    --color-white: #ffffff;
+    --color-system: #3393ff;
 
     --font-manrope: "Manrope", sans-serif;
     --font-heading: "Cormorant Garamond", sans-serif;
@@ -71,6 +73,10 @@ body {
     --text-heading-description: 2.5vw;
     --text-heading-description--line-height: 1.1;
     --text-heading-description--font-weight: 500;
+
+    --text-subheading: 2.5rem;
+    --text-subheading--line-height: 1.1;
+    --text-subheading--font-weight: 600;
 
     --text-content: 1.2vw;
     --text-content--line-height: 1;

@@ -3,8 +3,8 @@ import { Outlet } from "react-router-dom";
 import {
     QueryClient,
     QueryClientProvider,
-    useQuery,
 } from "@tanstack/react-query";
+import 'react-tippy/dist/tippy.css'
 
 function App() {
     const queryClient = new QueryClient();
@@ -13,7 +13,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <div className="flex flex-col gap-12 justify-between">
                 <Header />
-                <div className="flex-1 max-w-[1500px] mx-auto px-12">
+                <div className="flex-1 w-full max-w-[1500px] mx-auto px-12">
                     <Outlet />
                 </div>
                 <Footer />
