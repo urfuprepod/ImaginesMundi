@@ -22,7 +22,7 @@ const Contacts = () => {
             <Contact icon="Mail">
                 <p className="text-footer text-text-primary">Email:</p>
                 <a
-                    className="text-footer text-text-primary"
+                    className="text-footer text-system"
                     href="mailto:mhistory2025@mail.ru"
                 >
                     mhistory2025@mail.ru

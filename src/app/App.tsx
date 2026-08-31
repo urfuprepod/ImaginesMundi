@@ -13,7 +13,7 @@ function App() {
         <QueryClientProvider client={queryClient}>
             <div className="flex flex-col gap-12 justify-between">
                 <Header />
-                <div className="flex-1 w-full max-w-[1500px] mx-auto px-12">
+                <div className="flex-1 w-full max-w-[1700px] mx-auto px-12">
                     <Outlet />
                 </div>
                 <Footer />
