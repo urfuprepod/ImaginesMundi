@@ -1,8 +1,8 @@
-﻿import Modal from "react-modal";
+import Modal from "react-modal";
 import { TriangleAlert, X } from "lucide-react";
-import { useConfirmModal } from "../model/useConfirmModal";
+import { useConfirmModal } from "./model/useConfirmModal";
 
-export const ConfirmModal = () => {
+ const ConfirmModal = () => {
     const { title, description, callback, isOpen, close } = useConfirmModal();
 
     const handleConfirm = () => {
@@ -65,3 +65,5 @@ export const ConfirmModal = () => {
     );
 };
 
+
+export default ConfirmModal
