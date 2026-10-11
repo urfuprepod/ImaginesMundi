@@ -7,6 +7,7 @@ interface AdminFilesStore {
     setFiles: (items: any[]) => void;
     activeFilesId: string[];
     makeFilesActive: (ids: string | string[]) => void;
+    removeFilesFromActive: (ids: string[]) => void;
 }
 
 export const useAdminFiles = create<AdminFilesStore>()((set) => ({
@@ -15,6 +16,13 @@ export const useAdminFiles = create<AdminFilesStore>()((set) => ({
     setFiles: (files) => set({ files }),
     addFiles: (newFiles) =>
         set(({ files }) => ({ files: files.concat(newFiles) })),
+    removeFilesFromActive: (removedIds) => {
+        set(({ activeFilesId }) => ({
+            activeFilesId: activeFilesId.filter(
+                (el) => !removedIds.includes(el),
+            ),
+        }));
+    },
     deleteFiles: (ids) =>
         set(({ files }) => {
             const allIds = Array.isArray(ids) ? ids : [ids];

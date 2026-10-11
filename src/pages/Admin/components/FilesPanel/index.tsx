@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import {
+    Boxes,
     CircleChevronLeft,
     CircleChevronRight,
-    PaperBag,
     X,
 } from "lucide-react";
 import FileSystemButton from "../FileSystemButton";
@@ -75,7 +75,7 @@ const FilesPanel = () => {
             />
 
             <FileSystemButton
-                Icon={PaperBag}
+                Icon={Boxes}
                 hint="Выбрать все файлы"
                 isDisabled={files.length === 0}
                 onClick={handleChooseAllFiles}

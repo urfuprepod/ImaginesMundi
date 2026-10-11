@@ -4,6 +4,10 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import { ToastContainer,  } from "react-toastify";
+import Modal from "react-modal";
+import { ConfirmModal } from "../features/ConfirmModal";
+
+Modal.setAppElement("#root");
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -18,5 +22,6 @@ createRoot(document.getElementById("root")!).render(
             pauseOnHover
         />
         <RouterProvider router={router} />
+        <ConfirmModal />
     </StrictMode>,
 );
