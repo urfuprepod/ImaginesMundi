@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <title>Золотая роза ветров</title>
+  <defs>
+    <linearGradient id="gold" x1="70" y1="40" x2="320" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0C994"/><stop offset=".5" stop-color="#A78038"/><stop offset="1" stop-color="#D6BD83"/>
+    </linearGradient>
+    <g id="ray">
+      <path d="M200 42 214 185 200 200Z" fill="#B18B43"/>
+      <path d="M200 42 186 185 200 200Z" fill="#E5D5AE"/>
+      <path d="M200 42 214 185 200 200 186 185Z" stroke="#AC8742" stroke-width=".8"/>
+    </g>
+    <g id="short-ray">
+      <path d="M200 91 211 188 200 200Z" fill="#C1A063"/>
+      <path d="M200 91 189 188 200 200Z" fill="#EEE2C6"/>
+      <path d="M200 91 211 188 200 200 189 188Z" stroke="#B49559" stroke-width=".7"/>
+    </g>
+    <g id="tick"><path d="M200 30V37" stroke="#B39150" stroke-width="1"/></g>
+    <g id="ticks">
+      <use href="#tick"/><use href="#tick" transform="rotate(10 200 200)"/>
+      <use href="#tick" transform="rotate(20 200 200)"/><use href="#tick" transform="rotate(30 200 200)"/>
+      <use href="#tick" transform="rotate(40 200 200)"/><use href="#tick" transform="rotate(50 200 200)"/>
+      <use href="#tick" transform="rotate(60 200 200)"/><use href="#tick" transform="rotate(70 200 200)"/>
+      <use href="#tick" transform="rotate(80 200 200)"/>
+    </g>
+  </defs>
+  <g stroke="url(#gold)">
+    <circle cx="200" cy="200" r="176" stroke-width=".7" opacity=".5"/>
+    <circle cx="200" cy="200" r="160" stroke-width=".7" stroke-dasharray="2 5" opacity=".65"/>
+    <circle cx="200" cy="200" r="132" stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="126" stroke-width=".6"/>
+    <circle cx="200" cy="200" r="88" stroke-width="2"/>
+    <circle cx="200" cy="200" r="83" stroke-width=".6"/>
+    <path d="M200 10V390M10 200H390" stroke-width=".7" opacity=".65"/>
+    <path d="m76 76 248 248M76 324 324 76" stroke-width=".6" opacity=".35"/>
+  </g>
+  <g opacity=".7"><use href="#ticks"/><use href="#ticks" transform="rotate(90 200 200)"/><use href="#ticks" transform="rotate(180 200 200)"/><use href="#ticks" transform="rotate(270 200 200)"/></g>
+  <use href="#short-ray" transform="rotate(22.5 200 200)"/><use href="#short-ray" transform="rotate(67.5 200 200)"/>
+  <use href="#short-ray" transform="rotate(112.5 200 200)"/><use href="#short-ray" transform="rotate(157.5 200 200)"/>
+  <use href="#short-ray" transform="rotate(202.5 200 200)"/><use href="#short-ray" transform="rotate(247.5 200 200)"/>
+  <use href="#short-ray" transform="rotate(292.5 200 200)"/><use href="#short-ray" transform="rotate(337.5 200 200)"/>
+  <g transform="translate(200 200) scale(.73) translate(-200 -200)">
+    <use href="#ray" transform="rotate(45 200 200)"/><use href="#ray" transform="rotate(135 200 200)"/>
+    <use href="#ray" transform="rotate(225 200 200)"/><use href="#ray" transform="rotate(315 200 200)"/>
+  </g>
+  <use href="#ray"/><use href="#ray" transform="rotate(90 200 200)"/>
+  <use href="#ray" transform="rotate(180 200 200)"/><use href="#ray" transform="rotate(270 200 200)"/>
+  <circle cx="200" cy="200" r="7" fill="#D6BA7E" stroke="#A37D35"/>
+  <circle cx="200" cy="200" r="2.5" fill="#F4EAD4"/>
+  <g fill="#B18B43">
+    <path d="m200 4 3 7-3 7-3-7ZM200 382l3 7-3 7-3-7ZM4 200l7-3 7 3-7 3ZM382 200l7-3 7 3-7 3Z"/>
+    <circle cx="68" cy="200" r="3"/><circle cx="332" cy="200" r="3"/>
+    <circle cx="200" cy="68" r="3"/><circle cx="200" cy="332" r="3"/>
+  </g>
+</svg>

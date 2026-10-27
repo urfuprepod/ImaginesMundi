@@ -2,7 +2,7 @@ import Modal from "react-modal";
 import { TriangleAlert, X } from "lucide-react";
 import { useConfirmModal } from "./model/useConfirmModal";
 
- const ConfirmModal = () => {
+const ConfirmModal = () => {
     const { title, description, callback, isOpen, close } = useConfirmModal();
 
     const handleConfirm = () => {
@@ -20,9 +20,7 @@ import { useConfirmModal } from "./model/useConfirmModal";
             bodyOpenClassName="overflow-hidden"
         >
             <div className="flex items-center justify-between gap-4 border-b border-slate-200 px-6 py-4">
-                <h2 className="min-w-0 break-words font-medium">
-                    {title}
-                </h2>
+                <h2 className="min-w-0 break-words font-medium">{title}</h2>
                 <button
                     type="button"
                     onClick={close}
@@ -32,14 +30,9 @@ import { useConfirmModal } from "./model/useConfirmModal";
                 </button>
             </div>
             <div className="flex items-start gap-5 p-8">
-                <TriangleAlert
-                    size={32}
-                    className="shrink-0 text-amber-500"
-                />
+                <TriangleAlert size={32} className="shrink-0 text-amber-500" />
                 <div className="min-w-0">
-                    <p
-                        className="whitespace-pre-wrap break-words leading-relaxed"
-                    >
+                    <p className="whitespace-pre-wrap break-words leading-relaxed">
                         {description}
                     </p>
                 </div>
@@ -65,5 +58,4 @@ import { useConfirmModal } from "./model/useConfirmModal";
     );
 };
 
-
-export default ConfirmModal
+export default ConfirmModal;

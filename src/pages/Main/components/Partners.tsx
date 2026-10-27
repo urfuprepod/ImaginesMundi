@@ -2,6 +2,7 @@
 import PartnerItem from "./PartnerItem";
 
 const data = {
+    id: "main",
     layout: {
         partners: { order: 1 },
         redactor: { order: 2 },
@@ -12,6 +13,7 @@ const data = {
         title: "Журнал представлен в научных системах",
         items: [
             {
+                id: "elibrary",
                 name: "Научная электронная библиотека",
                 link: "#",
                 logo: "https://rlst.by/wp-content/uploads/2021/05/elibrary_fb.png",
@@ -28,7 +30,7 @@ const Partners = () => {
             </div>
             <div className="flex flex-col gap-3 p-3 overflow-y-auto max-h-[500px]">
                 {data.partners.items.map((partner) => (
-                    <PartnerItem item={partner} />
+                    <PartnerItem key={partner.id} item={partner} />
                 ))}
             </div>
         </div>

@@ -21,12 +21,12 @@
         "noUnusedParameters": true,
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
-        "baseUrl": "./",
         "paths": {
-            "@/*": ["./src/*"],
             "@shared": ["./src/shared"],
             "@pages": ["./src/pages"],
-            "@utils": ["./src/utils"]
+            "@utils": ["./src/utils"],
+            "@store": ["./src/store"],
+            "@types": ["./src/types"]
         }
     },
     "include": ["src"]

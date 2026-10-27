@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import type { Partner } from "../types";
+import type { Partner } from "../../../features/monaco";
 import { ExternalLink } from "lucide-react";
 
 type Props = {

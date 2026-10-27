@@ -1,9 +1,10 @@
 import React from "react";
+import MagazineSeries from "./components/MagazineSeries";
 
 const ORDER = ['PARTNERS', 'REDACTOR', "CONTENT", "MAGAZINES"] as const;
 
 const Main = () => {
-    return <div className="flex"></div>;
+    return <MagazineSeries />;
 };
 
 export default Main;
