@@ -1,24 +1,20 @@
-import { useState } from "react";
 import TabItem from "../TabItem";
-import { useAdminFiles } from "../../hooks";
 
-const TABS = ["Выпуски", "Изображения"];
+const TABS = ["Выпуски", "Изображения", "Текстовый редактор"];
 
-const Tabs = () => {
-    const [activeId, setActiveId] = useState(0);
-    const { makeFilesActive } = useAdminFiles();
+type Props = {
+    activeId: number;
+    onChangeActive: (id: number) => void;
+};
 
-    const handleChangeTab = (id: number) => {
-        setActiveId(id);
-        makeFilesActive([]);
-    };
+const Tabs = ({ activeId, onChangeActive }: Props) => {
 
     return (
-        <div className="flex border-b-2 border-solid border-b-[#e6eff8] gap-10">
+        <div className="flex flex-wrap border-b-2 border-solid border-b-[#e6eff8] gap-10">
             {TABS.map((el, id) => (
                 <TabItem
                     key={id}
-                    onChangeActive={() => handleChangeTab(id)}
+                    onChangeActive={() => onChangeActive(id)}
                     title={el}
                     isActive={activeId === id}
                 />

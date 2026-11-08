@@ -3,3 +3,4 @@ export { default as Footer } from "./Footer";
 export { default as Tree } from "./Tree";
 export type { TreeItem, TreeProps } from "./Tree";
 export { default as CloseButton } from "./CloseButton";
+export { default as Typography } from "./Typography";

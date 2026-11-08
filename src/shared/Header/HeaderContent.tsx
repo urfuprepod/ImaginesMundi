@@ -10,7 +10,7 @@ const HeaderContent = () => {
                     Imagines <br /> Mundi
                 </h1>
 
-                <h3 className="text-heading-description font-heading mt-[1vw] text-primary">
+                <h3 className="font-heading mt-[1vw] text-primary text-heading-description">
                     Альманах исследований <br></br> всеобщей истории XVI—XX вв.
                 </h3>
             </div>

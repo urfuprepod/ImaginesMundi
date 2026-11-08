@@ -2,8 +2,8 @@ import React, { type FC } from "react";
 import { useAdminFiles } from "../../hooks";
 import clsx from "clsx";
 import { FILE_ITEM_CLASSNAME } from "../../constants";
-import { CloseButton } from "@/shared";
-import { useConfirmModal } from "@/features";
+import { CloseButton } from "@shared";
+import { useConfirmModal } from "@features";
 
 type Props = {
     file: any;

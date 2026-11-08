@@ -5,7 +5,7 @@ import {
     QueryClientProvider,
 } from "@tanstack/react-query";
 import 'react-tippy/dist/tippy.css'
-import { ConfirmModal } from "@/features";
+import { ConfirmModal } from "@features";
 
 function App() {
     const queryClient = new QueryClient();

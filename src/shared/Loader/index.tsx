@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Clocks from "./Clocks";
 import Eye from "./Eye";
 import Globus from "./Globus";
-import { getRandomInt } from "@/utils";
+import { getRandomInt } from "@utils";
 
 const dict = new Map([
     [0, Clocks],

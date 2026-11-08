@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { type FC, type PropsWithChildren } from "react";
+import { type FC, type PropsWithChildren } from "react";
 import { HEADER_BUTTONS_STYLES } from "./constants";
 
 type Props = {

@@ -26,7 +26,8 @@
             "@pages": ["./src/pages"],
             "@utils": ["./src/utils"],
             "@store": ["./src/store"],
-            "@types": ["./src/types"]
+            "@types": ["./src/types"],
+            "@features": ["./src/features"]
         }
     },
     "include": ["src"]
