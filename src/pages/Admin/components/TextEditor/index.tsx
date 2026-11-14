@@ -1,38 +1,54 @@
-import { EditorContent } from "@tiptap/react";
-import clsx from "clsx";
+import "./tinymce";
+import { Editor } from "@tinymce/tinymce-react";
+import { textEditorOptions } from "./options";
+import { useId } from "react";
+import { Typography } from "@shared";
 import { useTextEditor } from "./useTextEditor";
 
 const TextEditor = () => {
-    const { editor, actions } = useTextEditor();
+    const id = useId();
+    const {
+        titleField, content, handleContentChange, handleContentBlur,
+        titleError, contentError, isSubmitting, handleSubmit,
+    } = useTextEditor();
 
     return (
-        <section className="flex min-w-0 flex-col gap-4">
-            <h2 className="text-h2">Текстовый редактор</h2>
-            <p className="text-paragraph text-slate-500">
-                Черновик хранится только в открытом редакторе. Сохранение пока не подключено.
-            </p>
-            <div className="overflow-hidden rounded-md border border-slate-300">
-                <div role="group" aria-label="Форматирование текста" className="flex flex-wrap gap-2 border-b border-slate-300 bg-slate-50 p-3">
-                    {actions.map(({ label, active, disabled, run }) => (
-                        <button
-                            key={label}
-                            type="button"
-                            aria-pressed={active}
-                            disabled={!editor || disabled}
-                            onMouseDown={(event) => event.preventDefault()}
-                            onClick={run}
-                            className={clsx(
-                                "rounded border px-3 py-2 text-[1.4rem] focus-visible:outline-2 focus-visible:outline-system disabled:cursor-not-allowed disabled:opacity-40",
-                                active ? "border-system bg-system text-white" : "border-slate-300 bg-white hover:bg-slate-100",
-                            )}
-                        >
-                            {label}
-                        </button>
-                    ))}
-                </div>
-                <EditorContent editor={editor} />
+        <form noValidate onSubmit={handleSubmit} className="flex min-w-0 flex-col gap-6">
+            <Typography.H2>Создание страницы</Typography.H2>
+            <div className="flex flex-col gap-3">
+                <label htmlFor={`${id}-title`} className="text-paragraph">Заголовок страницы *</label>
+                <input
+                    {...titleField}
+                    id={`${id}-title`}
+                    type="text"
+                    required
+                    aria-invalid={!!titleError}
+                    aria-describedby={titleError ? `${id}-title-error` : undefined}
+                    placeholder="Введите заголовок страницы"
+                    className="w-full rounded-md border border-slate-300 px-4 py-3 text-paragraph outline-none focus:border-system focus:ring-1 focus:ring-system aria-invalid:border-red-600"
+                />
+                {titleError && <p id={`${id}-title-error`} className="text-paragraph text-red-600">{titleError}</p>}
             </div>
-        </section>
+            <div className="flex min-w-0 flex-col gap-3">
+                <label htmlFor={`${id}-content`} className="text-paragraph">Содержимое страницы *</label>
+                <Editor
+                    id={`${id}-content`}
+                    licenseKey="gpl"
+                    init={textEditorOptions}
+                    value={content}
+                    onEditorChange={handleContentChange}
+                    onBlur={handleContentBlur}
+                />
+                {contentError && <p className="text-paragraph text-red-600">{contentError}</p>}
+            </div>
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="self-start rounded-md bg-system px-6 py-3 text-paragraph text-white transition hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-system disabled:cursor-not-allowed disabled:opacity-50"
+            >
+                {isSubmitting ? "Создание…" : "Создать страницу"}
+            </button>
+        </form>
     );
 };
 

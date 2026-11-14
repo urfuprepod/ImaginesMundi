@@ -5,7 +5,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import { ToastContainer,  } from "react-toastify";
 import Modal from "react-modal";
-import { ConfirmModal } from "../features/ConfirmModal";
+import { ConfirmModal } from "@features";
 
 Modal.setAppElement("#root");
 

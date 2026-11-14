@@ -19,7 +19,7 @@ const CompassCard = ({ title, description, href, linkLabel, icon }: Props) => {
                 <Icon />
             </span>
             <div className="flex min-w-0 flex-col gap-4">
-                <Typography.H3 className="wrap-break-word uppercase">
+                <Typography.H3 className="wrap-break-word font-bold uppercase">
                     {title}
                 </Typography.H3>
 

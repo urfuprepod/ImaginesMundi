@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import React, { type FC } from "react";
+import { Typography } from "@shared";
 
 type Props = {
     isActive: boolean;
@@ -19,7 +20,7 @@ const TabItem: FC<Props> = ({ isActive, title, onChangeActive }) => {
             )}
             onClick={onChangeActive}
         >
-            <h5 className="text-subheading">{title} </h5>
+            <Typography.H5>{title}</Typography.H5>
         </div>
     );
 };

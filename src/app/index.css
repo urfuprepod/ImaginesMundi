@@ -51,6 +51,7 @@ body {
     margin: 0 auto;
 }
 
+
 @theme {
     /* Свои цвета — будут как bg-primary, text-secondary */
     --color-primary: #b18636;
@@ -86,6 +87,10 @@ body {
     --text-h3--line-height: 1.2;
     --text-h3--font-weight: 500;
 
+    --text-h5: 1.6rem;
+    --text-h5--line-height: 1.1;
+    --text-h5--font-weight: 600;
+
     --text-footer: 1.8rem;
     --text-footer--line-height: 1.5;
     --text-footer--font-weight: 500;
@@ -93,8 +98,8 @@ body {
     --text-paragraph: 1.6rem;
     --text-paragraph--line-height: 1.2;
 
-    --text-strong: 1.25rem;
-    --text-strong--line-height: 1.25;
+    --text-strong: 1.6rem;
+    --text-strong--line-height: 1.2;
     --text-strong--font-weight: 700;
 
     --text-small: 1rem;

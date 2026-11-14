@@ -1,22 +1,29 @@
 import TabItem from "../TabItem";
 
-const TABS = ["Выпуски", "Изображения", "Текстовый редактор"];
+export const TABS = [
+    { label: "Выпуски", value: "issues" },
+    { label: "Изображения", value: "images" },
+    { label: "Текстовый редактор", value: "text-editor" },
+    { label: "Конфигурации", value: "configurations" },
+] as const;
+
+export type AdminTab = (typeof TABS)[number]["value"];
 
 type Props = {
-    activeId: number;
-    onChangeActive: (id: number) => void;
+    activeId: AdminTab;
+    onChangeActive: (value: AdminTab) => void;
 };
 
 const Tabs = ({ activeId, onChangeActive }: Props) => {
 
     return (
         <div className="flex flex-wrap border-b-2 border-solid border-b-[#e6eff8] gap-10">
-            {TABS.map((el, id) => (
+            {TABS.map(({ label, value }) => (
                 <TabItem
-                    key={id}
-                    onChangeActive={() => onChangeActive(id)}
-                    title={el}
-                    isActive={activeId === id}
+                    key={value}
+                    onChangeActive={() => onChangeActive(value)}
+                    title={label}
+                    isActive={activeId === value}
                 />
             ))}
         </div>

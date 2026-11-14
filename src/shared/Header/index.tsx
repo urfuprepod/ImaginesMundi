@@ -2,14 +2,15 @@ import HeaderContent from './HeaderContent'
 
 const Header = () => {
     return (
-        <div className="relative">
+        <div className="relative pb-[3.28vw]">
             <HeaderContent />
-            <div className="absolute inset-x-0 bottom-[0] translate-y-[4.1vw]">
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[15vw]">
                 <svg
                     width="100%"
                     height="100%"
                     id="svg"
                     viewBox="0 0 1440 270"
+                    preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className="transition duration-300 ease-in-out delay-150"
                 >
