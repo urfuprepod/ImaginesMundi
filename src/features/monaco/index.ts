@@ -3,9 +3,16 @@ import { BaseSchema } from "./base";
 import { CompassCardSchema, CompassSchema } from "./compass";
 import { PartnerSchema, PartnersListSchema } from "./partnersList";
 import { RussianDictionarySchema } from "./russianDictionary";
+import { RouterConfigSchema } from "./router";
+import { HomeSectionConfigSchema } from "./homeSection";
 
 export { PartnerSchema, PartnersListSchema, RussianDictionarySchema };
 export { BaseSchema, CompassCardSchema, CompassSchema };
+export { RouterConfigSchema };
+export { HomeSectionConfigSchema };
+
+export type RouterConfig = z.infer<typeof RouterConfigSchema>;
+export type HomeSectionConfig = z.infer<typeof HomeSectionConfigSchema>;
 
 export type BaseConfig = z.infer<typeof BaseSchema>;
 export type CompassCard = z.infer<typeof CompassCardSchema>;

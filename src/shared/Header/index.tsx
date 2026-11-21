@@ -1,10 +1,18 @@
 import HeaderContent from './HeaderContent'
+import HeaderNavigation from "./HeaderNavigation";
+import type { RouterConfig } from "../../features/monaco";
+import {
+    HEADER_WAVE_STYLES,
+    HEADER_WAVE_SVG_STYLES,
+    HEADER_WAVE_PATH_STYLES,
+} from "./constants";
 
-const Header = () => {
+const Header = ({ navigationItems }: { navigationItems: RouterConfig }) => {
     return (
-        <div className="relative pb-[3.28vw]">
+        <header className="relative pb-[3.28vw]">
+            <HeaderNavigation items={navigationItems} />
             <HeaderContent />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[15vw]">
+            <div className={HEADER_WAVE_STYLES}>
                 <svg
                     width="100%"
                     height="100%"
@@ -12,7 +20,7 @@ const Header = () => {
                     viewBox="0 0 1440 270"
                     preserveAspectRatio="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="transition duration-300 ease-in-out delay-150"
+                    className={HEADER_WAVE_SVG_STYLES}
                 >
                     <path
                         d="M 0,400 L 0,150 C 106.86124401913875,166.4688995215311 213.7224880382775,182.9377990430622 302,187 C 390.2775119617225,191.0622009569378 459.97129186602865,182.7177033492823 543,191 C 626.0287081339713,199.2822966507177 722.3923444976077,224.1913875598086 819,202 C 915.6076555023923,179.8086124401914 1012.4593301435407,110.51674641148327 1116,94 C 1219.5406698564593,77.48325358851673 1329.7703349282297,113.74162679425837 1440,150 L 1440,400 L 0,400 Z"
@@ -20,11 +28,11 @@ const Header = () => {
                         strokeWidth="0"
                         fill="#f9f8f8"
                         fillOpacity="1"
-                        className="transition-all duration-300 ease-in-out delay-150 path-0"
+                        className={HEADER_WAVE_PATH_STYLES}
                     ></path>
                 </svg>
             </div>
-        </div>
+        </header>
     );
 };
 

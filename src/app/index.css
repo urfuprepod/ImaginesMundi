@@ -62,6 +62,8 @@ body {
     --color-gg: #f5f3f1;
     --color-white: #ffffff;
     --color-system: #3393ff;
+    --color-router-surface: #08131d;
+    --color-router-accent: #efc675;
 
     --font-manrope: "Manrope", sans-serif;
     --font-heading: "Cormorant Garamond", sans-serif;
@@ -94,6 +96,10 @@ body {
     --text-footer: 1.8rem;
     --text-footer--line-height: 1.5;
     --text-footer--font-weight: 500;
+
+    --text-router: 2.2rem;
+    --text-router--line-height: 1;
+    --text-router--font-weight: 700;
 
     --text-paragraph: 1.6rem;
     --text-paragraph--line-height: 1.2;

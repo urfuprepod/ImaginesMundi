@@ -28,6 +28,16 @@ const Contacts = () => {
                     mhistory2025@mail.ru
                 </a>
             </Contact>
+
+            <Contact icon="User">
+                <p className="text-footer text-text-primary">Секретарь:</p>
+                <a
+                    className="text-footer text-system"
+                    href="mailto:mhistory2025@mail.ru"
+                >
+                    imundi_urfu@mail.ru
+                </a>
+            </Contact>
         </div>
     );
 };

@@ -6,14 +6,15 @@ import {
 } from "@tanstack/react-query";
 import 'react-tippy/dist/tippy.css'
 import { ConfirmModal } from "@features";
+import type { RouterConfig } from "../features/monaco";
 
-function App() {
+function App({ routeConfig }: { routeConfig: RouterConfig }) {
     const queryClient = new QueryClient();
 
     return (
         <QueryClientProvider client={queryClient}>
             <div className="flex flex-col gap-12 justify-between">
-                <Header />
+                <Header navigationItems={routeConfig} />
                 <div className="flex-1 w-full max-w-[1700px] mx-auto px-12">
                     <Outlet />
                 </div>
