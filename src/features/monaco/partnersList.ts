@@ -6,8 +6,3 @@ export const PartnerSchema = BaseSchema.extend({
     name: z.string(),
     link: z.string(),
 });
-
-export const PartnersListSchema = BaseSchema.extend({
-    type: z.literal("partners"),
-    partners: z.array(PartnerSchema),
-});

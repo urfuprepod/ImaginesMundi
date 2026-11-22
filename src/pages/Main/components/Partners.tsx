@@ -24,8 +24,8 @@ const data = {
 
 const Partners = () => {
     return (
-        <div className="border border-border rounded-lg">
-            <div className="border-b border-border background-gg p-3">
+        <div className="rounded-lg border border-border background-gg">
+            <div className="border-b border-border">
                 {data.partners.title}
             </div>
             <div className="flex flex-col gap-3 p-3 overflow-y-auto max-h-[500px]">
