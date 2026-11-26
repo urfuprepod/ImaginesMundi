@@ -2,7 +2,11 @@ import { useId } from "react";
 import { Input } from "../../../shared/ui/input";
 import type { FieldConfigOf, FieldViewProps } from "../types";
 
-const TextField = ({ config, field, fieldState }: FieldViewProps<FieldConfigOf<"text">>) => {
+const TextField = ({
+    config,
+    field,
+    fieldState,
+}: FieldViewProps<FieldConfigOf<"text">>) => {
     const id = useId();
     const errorId = fieldState.error ? `${id}-error` : undefined;
 

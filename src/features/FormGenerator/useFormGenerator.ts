@@ -1,11 +1,13 @@
 import { useRef } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import type { QueryKey } from "@tanstack/react-query";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import type { FormAction, FormValues } from "./types";
 
-const useFormGenerator = (onClose: () => void, onSaved?: () => void) => {
+const useFormGenerator = (onSubmit: () => void, dataKey: QueryKey) => {
     const form = useForm<FormValues>();
+    const queryClient = useQueryClient();
     const isHandlingAction = useRef(false);
     const { mutateAsync, reset, isError } = useMutation({
         mutationFn: ({ action, values }: { action: FormAction; values: FormValues }) =>
@@ -13,22 +15,12 @@ const useFormGenerator = (onClose: () => void, onSaved?: () => void) => {
     });
     const { isSubmitting } = form.formState;
 
-    const close = () => {
-        reset();
-        form.reset();
-        onClose();
-    };
-
-    const handleClose = () => {
-        if (!isHandlingAction.current) close();
-    };
-
     const handleAction = async (action: FormAction) => {
         if (isHandlingAction.current) return;
 
         isHandlingAction.current = true;
         reset();
-        let didSave = false;
+        let didSubmit = false;
         try {
             await form.handleSubmit(async values => {
                 try {
@@ -37,18 +29,18 @@ const useFormGenerator = (onClose: () => void, onSaved?: () => void) => {
                     // The mutation exposes the error for the form to display.
                     return;
                 }
-                didSave = true;
+                didSubmit = action.type === "submit";
             })();
-            if (didSave) {
-                onSaved?.();
-                close();
+            if (didSubmit) {
+                onSubmit();
+                queryClient.invalidateQueries({ queryKey: dataKey });
             }
         } finally {
             isHandlingAction.current = false;
         }
     };
 
-    return { form, isSubmitting, isError, handleAction, handleClose };
+    return { form, isSubmitting, isError, handleAction };
 };
 
 export default useFormGenerator;

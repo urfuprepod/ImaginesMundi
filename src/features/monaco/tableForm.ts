@@ -39,6 +39,7 @@ export const FormConfigSchema = z.object({
     actions: z.array(
         z.object({
             text: z.string(),
+            type: z.enum(["button", "submit"]).default("submit"),
             method: z.enum(["PUT", "PATCH"]),
             link: z.string(),
         }),

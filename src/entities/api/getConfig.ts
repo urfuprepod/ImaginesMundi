@@ -12,13 +12,13 @@ const mockConfigs: ReadonlyMap<string, TableFormConfig | FormConfig> = new Map([
         title: "Добавить выпуск",
         type: "form",
         fields: [{ required: true, label: "Название", type: "text", name: "title" }],
-        actions: [{ text: "Создать", method: "PUT", link: "/api/issues" }],
+        actions: [{ text: "Создать", type: "submit", method: "PUT", link: "/api/issues" }],
     }],
     ["issue-edit", {
         title: "Редактировать выпуск",
         type: "form",
         fields: [{ required: true, label: "Название", type: "text", name: "title" }],
-        actions: [{ text: "Сохранить", method: "PATCH", link: "/api/issues/{id}" }],
+        actions: [{ text: "Сохранить", type: "submit", method: "PATCH", link: "/api/issues/{id}" }],
     }],
 ]);
 
