@@ -4,16 +4,7 @@ import Modal from "react-modal";
 import { FormGenerator } from "../../features";
 import type { FormConfig } from "../../features/monaco";
 import Typography from "../../shared/Typography";
-
-const modalClassName = `
-    max-h-full w-full max-w-2xl overflow-y-auto rounded-lg bg-white p-6
-    shadow-xl outline-none
-`;
-
-const closeButtonClassName = `
-    shrink-0 cursor-pointer rounded-md p-2 text-text-primary
-    hover:bg-gg focus-visible:outline-2 focus-visible:outline-link
-`;
+import { modalClassName, closeButtonClassName } from "./constants";
 
 type TableFormModalProps = {
     config: FormConfig;
