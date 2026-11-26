@@ -7,6 +7,7 @@ import { RouterConfigSchema } from "./router";
 import { HomeSectionConfigSchema } from "./homeSection";
 import { HomeContentConfigSchema } from "./homeContent";
 import { StoredFileSchema } from "./storedFile";
+import { FormConfigSchema, TableFormConfigSchema } from "./tableForm";
 
 export { PartnerSchema, RussianDictionarySchema };
 export { BaseSchema, CompassCardSchema, CompassSchema };
@@ -14,11 +15,14 @@ export { RouterConfigSchema };
 export { HomeSectionConfigSchema };
 export { HomeContentConfigSchema };
 export { StoredFileSchema };
+export { FormConfigSchema, TableFormConfigSchema };
 
 export type RouterConfig = z.infer<typeof RouterConfigSchema>;
 export type HomeSectionConfig = z.infer<typeof HomeSectionConfigSchema>;
 export type HomeContentConfig = z.infer<typeof HomeContentConfigSchema>;
 export type StoredFile = z.infer<typeof StoredFileSchema>;
+export type FormConfig = z.infer<typeof FormConfigSchema>;
+export type TableFormConfig = z.infer<typeof TableFormConfigSchema>;
 
 export type BaseConfig = z.infer<typeof BaseSchema>;
 export type CompassCard = z.infer<typeof CompassCardSchema>;

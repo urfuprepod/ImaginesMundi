@@ -62,6 +62,14 @@ body {
     --color-gg: #f5f3f1;
     --color-white: #ffffff;
     --color-system: #3393ff;
+    --color-link: #2563eb;
+    --color-foreground: var(--color-text-primary);
+    --color-muted: var(--color-gg);
+    --color-muted-foreground: #62676c;
+    --color-primary-foreground: var(--color-white);
+    --color-input: #767b80;
+    --color-ring: var(--color-link);
+    --color-destructive: #b91c1c;
     --color-router-surface: #08131d;
     --color-router-accent: #efc675;
 

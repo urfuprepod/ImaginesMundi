@@ -1,0 +1,1 @@
+export { useQueryMainPage } from "./useQueryMainPage";

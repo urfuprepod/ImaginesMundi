@@ -1,1 +1,1 @@
-export { useQueryMainPage } from "./useQueryMainPage";
+export { getConfig } from "./getConfig";

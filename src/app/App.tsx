@@ -8,7 +8,7 @@ import 'react-tippy/dist/tippy.css'
 import { ConfirmModal } from "@features";
 import type { RouterConfig } from "../features/monaco";
 
-function App({ routeConfig }: { routeConfig: RouterConfig }) {
+const App = ({ routeConfig }: { routeConfig: RouterConfig }) => {
     const queryClient = new QueryClient();
 
     return (
@@ -23,6 +23,6 @@ function App({ routeConfig }: { routeConfig: RouterConfig }) {
             <ConfirmModal />
         </QueryClientProvider>
     );
-}
+};
 
 export default App;
